@@ -1,69 +1,78 @@
-# React + TypeScript + Vite
+# 🏡 Property Listing Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive web application built with React for listing, filtering, and viewing property details. Users can add new properties, explore listings, and view detailed info with an embedded Google Map view.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Property search and filtering
+- 🏠 Dynamic property cards with images
+- 📝 Add property form with validation
+- 📍 Google Maps location embedding
+- 🌙 Dark mode toggle
+- 💾 Local state management (no backend)
+- 📱 Fully responsive design
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── AddPropertyForm.tsx
+│ │ ├── PropertyCard.tsx
+│ │ ├── PropertyModal.tsx
+│ │ └── ...
+│ ├── context/
+│ │ └── PropertyContext.tsx
+│ ├── App.tsx
+│ └── main.tsx
+├── index.html
+├── package.json
+└── README.md
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+markdown
+Copy
+Edit
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Frontend**: React + TypeScript + Vite
+- **Styling**: CSS Modules
+- **State Management**: React Context API
+- **Maps**: Google Maps Embed API
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Setup & Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+   git clone https://github.com/Aditisp11/PropertyListing.git
+   cd PropertyListing
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+Run the development server:
+
+bash
+Copy
+Edit
+npm run dev
+Open in browser:
+
+arduino
+Copy
+Edit
+http://localhost:5173
+📸 Preview
+<!-- Replace with actual screenshot file -->
+
+✨ Future Enhancements
+Backend integration (Node.js + MongoDB)
+
+User login and favorites
+
+Map-based property search
+
+Filter by price, location, and type
